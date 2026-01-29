@@ -27,10 +27,10 @@
     setTimeout(initNavigation, 700);
   }
 
-  // Reemplaza el GIF por el logo estático cuando termine la animación para que quede 'pausado' visualmente.
+  // Reemplaza el GIF por el logo estatico cuando termine la animación para que quede 'pausado' visualmente.
   const gifDuration = 4500;
   const finalLogo = 'assets/SpaceZenit.jpeg';
-  // Precargar el logo final
+  // Creo que precarga el logo
   const _pre = new Image(); _pre.src = finalLogo;
 
   setTimeout(()=>{
@@ -59,11 +59,11 @@
 })();
 
 // ===================================
-// SISTEMA DE NAVEGACIÓN POR TABS
+// Navegacion por tab
 // ===================================
 function initNavigation() {
   
-  // Obtener todos los enlaces del navbar
+  // Con esto tenemos todos los enlaces de navbar
   const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('.section');
   const hero = document.getElementById('hero');
@@ -81,7 +81,7 @@ function initNavigation() {
 
   }
   
-  // Función para mostrar una sección específica
+  // Muestrta la seccion especifica
   function showSection(targetId) {
     hideAllSections();
     
@@ -90,7 +90,7 @@ function initNavigation() {
       link.classList.remove('active');
     });
     
-    // Si es el hero (página principal)
+    // Si es el hero
     if (targetId === '#hero' || targetId === '') {
       if (hero) {
         hero.classList.add('active');

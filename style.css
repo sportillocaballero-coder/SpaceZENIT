@@ -141,7 +141,10 @@ body {
   top: 80px;
   left: 0;
   width: 100%;
-  height: calc(100vh - 80px);
+  /* Usar max-height y scroll interno para que en pantallas pequeñas se pueda scrollear */
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 1;
   visibility: visible;
 }
@@ -149,6 +152,21 @@ body {
 #hero.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Ajustes responsivos para dispositivos móviles */
+@media (max-width: 640px) {
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-claim {
+    font-size: 2rem;
+  }
+
+  .hero-bajada {
+    font-size: 1rem;
+  }
 }
 
 .hero-content {
